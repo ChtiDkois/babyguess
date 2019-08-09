@@ -1,0 +1,29 @@
+    <table>
+      <thead>
+        <tr>
+        <th>Joueur ?</th>
+        <th>Fille ou gars ?</th>
+        <th>A quelle heure ?</th>
+        <th>Poids</th>
+        <th>Taille</th>
+        <th>Elle ... qui ?</th>
+        <th>Il ... qui ??</th>
+        <th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="prono in pronos | orderBy:'name'">
+        <td>{{prono.player}}</td>
+        <td>{{prono.gender}}</td>
+        <td>{{prono.date}}</td>
+        <td>{{prono.height}}</td>
+        <td>{{prono.weight}}</td>
+        <td>{{prono.girlName}}</td>
+        <td>{{prono.boyName}}</td>
+        <td>
+        <a href="#/edit/{{prono.$id}}"><i class="icon-pencil"></i></a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+

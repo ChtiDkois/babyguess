@@ -1,0 +1,37 @@
+#blabla {
+  padding-right : 50px;
+}
+
+.content {
+  font-size : 15px;
+  margin : 0px 45px;
+}
+
+.listing {
+  border : 1px solid;
+  text-align : center;
+  font-size : 15px;
+}
+
+.head > th {
+  background-color : #606060;
+  color : #FFFFFF;
+  border : 2px solid;
+  padding : 3px 20px;
+}
+
+
+.prono {
+  background-color : #FFFF77;
+  color : #606060;
+  border : 1px;
+  padding : 3px 20px;
+}
+
+.boy {
+    color : #0033CC;
+}
+
+.girl {
+    color : #FF66CC;
+}

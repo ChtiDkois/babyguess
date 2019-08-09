@@ -1,0 +1,46 @@
+doctype html
+html
+  include head.pug
+
+  body
+    h2 Guess who comes ?
+    div#blabla(class='content')
+      p
+        | Parce que vous êtes nombreux à être sur du sexe et
+        | de l'avance/retard/exactitude de la date, parce que nous nous
+        | délectons de vos dons de voyance, parce que nous savons que vous aimez
+        | avoir raison ...
+      p
+        | Nous vous proposons le jeu préféré des futurs parents : pariez sur la
+        | date de naissance, le sexe et, un peu d'imagination, les prénoms
+        | envisagés pour l'une ou l'un !
+      p
+        | Le vainqueur sera celui qui aura la bonne date de naissance et le bon
+        | sexe. Ensuite, en cas d'égalité, le partage sera fait en fonction du
+        | poids et de la taille : le plus proche sur la combinaison des deux sera le gagnant.
+        | Un bonus à celui qui trouvera le bon prénom (qu'importe s'il/elle est
+        | vainqueur(e)) !
+
+      a(class='button', href='newProno.html') À vos pronos !
+
+    div#blabla(class='content')
+        h3 Ce que les autres en disent
+
+        table(style='width:100%', border='1')
+          tr
+            th Player
+            th Sexe
+            th Date
+            th Poids
+            th Taille
+            th Si c'est une fille
+            th Si c'est un mec
+          each prono in pronos
+            tr
+              td= prono.name
+              td= prono.gender
+              td= prono.ddn
+              td= prono.weight
+              td= prono.height
+              td= prono.girlname
+              td= prono.boyname

@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h3 class="modal-title">À vous le resto ?</h3>
+</div>
+<div class="modal-body">
+    <dh>Votre Nom : </dh><dd><input type="text" ng-model="newprono.player" /></dd>
+    <dh>Fille ou Garçon ? : </dh><dd>
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="newprono.gender" btn-radio="'M'">Ptit gars</label>
+            <label class="btn btn-primary" ng-model="newprono.gender" btn-radio="'F'">Ptite fille</label>
+        </div>
+    </dd>
+    <dh>Date de Naissance ?</dh><dd>
+       <input class="form-control" type="text"
+       ng-model="newprono.estimatedDate"
+       datepicker-popup="dd/MM/yyyy" is-open="opened"
+       ng-click="opened = true" size="12"
+       placeholder="dd/MM/yyyy"/>
+    </dd>
+    <dh>Poids (g)</dh><dd><input type="number" ng-model="newprono.weight" /></dd>
+    <dh>Taille (cm)</dh><dd><input type="number" ng-model="newprono.height" /></dd>
+    <dh>Nom en cas de garçon ?</dh><dd><input type="text" ng-model="newprono.boyName" /></dd>
+    <dh>Nom en cas de fille ? </dh><dd><input type="text" ng-model="newprono.girlName" /></dd>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
