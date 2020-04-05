@@ -7,7 +7,7 @@ html
       form(method='POST' action='/newProno')
         div.form-group
           label(for='name') T'es qui ? :
-          input(type='text', placeholder='Luke Skywaler' name='name')
+          input(type='text', placeholder='Ton nom' name='name')
         div.form-group
           label(for='gender') Fille ou garçon ? :
           input(type='radio', name='gender' value="'F'")
@@ -19,7 +19,7 @@ html
           input(type='date', placeholder='24/07/2020' name='ddn')
         div.form-group
           label(for='weight') Poids (g) ? :
-          input(type='number', name='weight')
+          input(type='number', step='0.001' name='weight')
         div.form-group
           label(for='height') Taille (cm) ? :
           input(type='number', name='height')
