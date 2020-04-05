@@ -3,42 +3,35 @@ html
   include head.pug
 
   body
-    h2 Guess who comes ?
+    h2 Challenge bébé Soldat !
     div#blabla(class='content')
       p
-        | Parce que vous êtes nombreux à être sur du sexe et
-        | de l'avance/retard/exactitude de la date, parce que nous nous
-        | délectons de vos dons de voyance, parce que nous savons que vous aimez
-        | avoir raison ...
+        | Vous êtes nombreux à nous demander si ce sera une fille ou un garçon, la réponse est attendue pour tous fin juillet.
       p
-        | Nous vous proposons le jeu préféré des futurs parents : pariez sur la
-        | date de naissance, le sexe et, un peu d'imagination, les prénoms
-        | envisagés pour l'une ou l'un !
+        | En attendant nous vous proposons un petit challenge dont le gagnant
+	| ou la personne la plus proche et avec le plus de bonnes réponses
+	| gagnera un petit restaurant en notre compagnie et un cadeau surprise. 
       p
-        | Le vainqueur sera celui qui aura la bonne date de naissance et le bon
-        | sexe. Ensuite, en cas d'égalité, le partage sera fait en fonction du
-        | poids et de la taille : le plus proche sur la combinaison des deux sera le gagnant.
-        | Un bonus à celui qui trouvera le bon prénom (qu'importe s'il/elle est
-        | vainqueur(e)) !
+        | C'est simple, à vous de deviner toutes les informations demandées et c'est gagné !
 
       a(class='button', href='newProno.html') À vos pronos !
 
     div#blabla(class='content')
-        h3 Ce que les autres en disent
+        h3 Ce que les autres parieurs en disent...
 
         table(style='width:100%', border='1')
-          tr
-            th Player
+          tr(class='head')
+            th Parieur
             th Sexe
             th Date
             th Poids
             th Taille
-            th Si c'est une fille
-            th Si c'est un mec
+            th La petite s'appellerait...
+            th Le petit s'appellerait...
           each prono in pronos
-            tr
+            tr(class='prono')
               td= prono.name
-              td= prono.gender
+              td(class='prono.gender')= prono.gender
               td= prono.ddn
               td= prono.weight
               td= prono.height
